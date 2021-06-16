@@ -1,0 +1,75 @@
+/* To kill chromes margin */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/* ********************** */
+
+/* Grid Container */
+.container
+{
+    /* Sets display of .container to grid */
+    display: grid;
+    /* ********************************** */
+
+    /* In the two lines 'grid-template-columns' and 'grid-template-rows' we are going to set the entire layout for our page. */
+    /* the shorthand may look a little bit foreign right off, but in general it is straight forward and powerful */
+
+    /* Inside of the [square-brackets] we are going to set our line names. There are invisible lines between Ever single grid Cell and in this format we give them custom names. */
+    /* If we were to leave the line names blank they would default to numbers, and negative numbers. Best to name them because the negative numbers are a bit confusing. */
+
+    /* I like to use the naming convention [rlx] for row-line-x and [clx] for column-line-x. I use e for the respective ending line so that if I add a new line I do not have to rename the final line to the new total number of lines. I can simply add one before the end and adjust the contents in between lines. */
+
+    /* In between the lines we will set our display properties the same way you would set any size in CSS. */
+
+    /* Here we have 4 columns, one 4rem column to the left, then an auto column, another auto column, and another 4rem column to close the end. */
+    grid-template-columns: [cl1] 4rem [cl2] auto [cl3] auto [cl4] 4rem [cle];
+    /* Similarly for rows we have a 4rem row at the top, two 40vh rows make up the middle, and another 4rem row to close it off */
+    grid-template-rows: [rl1] 4rem [rl2] 40vh [rl3] 40vh [rl4] 4rem [rle];
+
+    background-color: #5555;
+}
+
+/* Grid Cells */
+.content-cell-left
+{
+    /* Now we can assign our location properties to our cells. This is where some serious fun can be had. */
+
+    /* Here we can use our lines to set exact spans. */
+    /* For our left justified cell we will specify column-line-2 and span to column-line-3. This will put us in column two, whose property is width:auto.  */
+    grid-column: cl2 / cl3;
+    /* To achieve the vertical location we will pick row lines. Here we specify row-line-2 to row-line-3 which will put us in the second row whose property is 40vh */
+    grid-row: rl2 / rl3;
+
+    /* styles */
+    margin: 5px;
+    padding: 5px;
+    border-radius: .5rem;
+    background-color: #00f;
+}
+
+.content-cell-right
+{
+    /* Just like before we can specify exactly where we want to to put our cell. Take note the ease with which we could add a column or row to our template without breaking cells that are already on the page. */
+    grid-column: cl3 / cl4;
+    grid-row: rl2 / rl3;
+
+    margin: 5px;
+    padding: 5px;
+    border-radius: .5rem;
+    background-color: #00f;
+}
+
+.content-cell-center
+{
+    /* Again we can see some awesome power of CSS grid as we simply call grid column to span from column-line-2 to column-line-4 and voila we have a cell that takes up the whole center column of the page. */
+    grid-column: cl2 / cl4;
+    /* We want to see this cell beneath our two smaller cells, so we will span the third row in our template by specifying row-line-3 to row-line-4 */
+    grid-row: rl3 / rl4;
+
+    margin: 5px;
+    padding: 5px;
+    border-radius: .5rem;
+    background-color: #00f;
+}

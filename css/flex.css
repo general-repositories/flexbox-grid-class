@@ -9,7 +9,7 @@
 /* Flex Container */
 .container
 {
-    /* Sets flex, and it's default properties */
+    /* Sets display of .container to flex, and it's default properties */
     display: flex;
     /* *************************** */
     /* Default properties include; */

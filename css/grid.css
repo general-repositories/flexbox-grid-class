@@ -45,7 +45,7 @@
     /* Now we can assign our location properties to our cells. This is where some serious fun can be had. */
 
     /* Here we can use our lines to set exact spans. */
-    /* For our left justified cell we will specify column-line-2 and span to column-line-3. This will put us in column two, whose property is width:auto.  */
+    /* For our left justified cell we will specify column-line-2 and span to column-line-3. This will put us in column two, whose property 1fr.  */
     grid-column: cl2 / cl3;
     /* To achieve the vertical location we will pick row lines. Here we specify row-line-2 to row-line-3 which will put us in the second row whose property is 1fr */
     grid-row: rl2 / rl3;
@@ -58,7 +58,8 @@
 
 .content-cell-right
 {
-    /* Just like before we can specify exactly where we want to to put our cell. Take note the ease with which we could add a column or row to our template without breaking cells that are already on the page. */
+    /* Just like before we can specify exactly where we want to to put our cell. */
+    /* Take note the ease with which we can add a column or row to our grid-template without breaking cells that are already on the page. */
     grid-column: cl3 / cl4;
     grid-row: rl2 / rl3;
 

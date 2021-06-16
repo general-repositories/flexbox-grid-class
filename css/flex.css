@@ -22,22 +22,20 @@
     /* General Flex Alignment */
 
     /* align-items: flex-start; */
-    /* justify-content: space-around; */
+    justify-content: space-around;
     /* ****************************** */
 
     /* ******************** */
     /* Here you can set some properties that only apply to wrap, with the exception of align-content:center */
     /* Flex Wrap Properties */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* align-content: space-between; */
     /* ******************** */
 
     
     /* Styles */
-    height: 80vh;
-    border-radius: .5rem;
+    height: 100vh;
     background-color: #5555;
-    margin: 1rem;
 }
 
 .item
@@ -47,20 +45,26 @@
     border-radius: .5rem;
     background-color: #00f;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
+    flex-basis: 30%;
 }
 
 .item-1
 {
-    order: 1;
+    flex-grow: 1;
+    align-self: center;
+    height: 200px;
 }
 
 .item-2
 {
-    order: 2;
+    flex-grow: 3;
+    align-self: stretch;
 }
 
 .item-3
 {
-    order: 3;
+    flex-grow: .75;
+    align-self: flex-end;
+    height: 300px;
 }

@@ -1,0 +1,66 @@
+/* To Kill chromes margin */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/* ********************** */
+
+/* Flex Container */
+.container
+{
+    /* Sets flex, and it's default properties */
+    display: flex;
+    /* *************************** */
+    /* Default properties include; */
+    /* flex-direction: row */
+    /* justify-content: flex-start */
+    /* align-items: stretch */
+    /* *************************** */
+    
+    /* ****************************** */
+    /* General Flex Alignment */
+
+    /* align-items: flex-start; */
+    /* justify-content: space-around; */
+    /* ****************************** */
+
+    /* ******************** */
+    /* Here you can set some properties that only apply to wrap, with the exception of align-content:center */
+    /* Flex Wrap Properties */
+    /* flex-wrap: wrap; */
+    /* align-content: space-between; */
+    /* ******************** */
+
+    
+    /* Styles */
+    height: 80vh;
+    border-radius: .5rem;
+    background-color: #5555;
+    margin: 1rem;
+}
+
+.item
+{
+
+    /* Styles */
+    border-radius: .5rem;
+    background-color: #00f;
+    margin: 5px;
+    padding: 5px;
+}
+
+.item-1
+{
+    order: 1;
+}
+
+.item-2
+{
+    order: 2;
+}
+
+.item-3
+{
+    order: 3;
+}

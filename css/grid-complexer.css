@@ -1,0 +1,49 @@
+.grid-container
+{
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-template-rows: repeat(12, 1fr);
+
+    grid-template-areas: 
+    ". header header header header header header header header header header ."
+    ". header header header header header header header header header header ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". . content content content content content content content content . ."
+    ". footer footer footer footer footer footer footer footer footer footer ."
+    ". footer footer footer footer footer footer footer footer footer footer ."
+    ;
+
+    gap: 5px;
+
+    height: 100vh;
+    background-color: #5555;
+}
+
+header
+{
+    grid-area: header;
+    border-radius: .5rem;
+    background-color: blue;
+}
+
+.content
+{
+    grid-area: content;
+    border-radius: .5rem;
+    background-color: #5555;
+}
+
+footer
+{
+    grid-area: footer;
+    border-radius: .5rem;
+    background-color: blueviolet;
+}

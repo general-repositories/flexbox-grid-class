@@ -21,7 +21,6 @@
     /* ****************************** */
     /* General Flex Alignment */
 
-    /* align-items: flex-start; */
     justify-content: space-around;
     /* ****************************** */
 
@@ -40,31 +39,126 @@
 
 .item
 {
+    /* Here we are setting flex-grow:1,  because we haven't set shrink or basis they are automatically set to 1 and 0%. */
+    flex: 1;
 
     /* Styles */
     border-radius: .5rem;
     background-color: #00f;
     margin: 5px;
     padding: 10px;
-    flex-basis: 30%;
 }
 
 .item-1
 {
-    flex-grow: 1;
+    /* Whenever we align things we are aligning them on the cross axis. The cross axis is always crossing the main direction that your content is going. */
     align-self: center;
+
+    /* Style */
     height: 200px;
 }
 
 .item-2
 {
-    flex-grow: 3;
+    /* Here we can see stretch spreading this item as far as possible across the cross axis */
     align-self: stretch;
 }
 
 .item-3
 {
-    flex-grow: .75;
+    /* Here we are aligning item-3 to the end of the cross axis. Since the initial direction of flex-row is from top to bottom, then the end is the bottom. */
     align-self: flex-end;
-    height: 300px;
+
+    /* Style */
+    height: 200px;
+}
+
+.container-no-wrap
+{
+    display: flex;
+
+    /* Styles */
+    height: 100vh;
+    background-color: #5555;
+}
+
+/* Here we'll go over flex-grow, flex-shrink, and flex-basis respectively. These are a lot to take in, and very very powerful for responsive content. */
+
+/* We will focus on using the `flex: x x x` property shorthand. This goes in order from left to right: grow, shrink, and basis. */
+
+/* flex-grow is saying "I will take this many pieces of the available space that is leftover if I am asked to go above my basis." */
+
+/* flex-shrink is saying "I will give up this many pieces of myself as I am forced below my basis" */
+
+/* flex-basis is the initial size that grow or shrink will call on. So if we set one item's basis to half of the view-width and a grow of 1, along with another item with one quarter of the view width with a grow of 0 then the first item would take all of the remaining space to fill the remaining quarter of space. */
+.item-4
+{
+    flex: 1 0 50vw;
+}
+
+.item-5
+{
+    flex: 0 0 25vw;
+}
+
+/* Now it's time to play with column */
+.container-column
+{
+    display: flex;
+    /* When column is specified you will immediately notice that our items flow from top to bottom now instead of left to right. */
+
+    /* One important detail that may not be obvious is that the main axis is now rotated 90 degrees, which means the cross axis is also rotated 90 degrees. So when we call for align-x it will still be along the cross axis, but it will now do the opposite of what it would under a row container. */
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+
+    /* Style */
+    height: 100vh;
+    background-color: #5555;
+}
+
+.item-6
+{
+    flex: 1 0 100px;
+}
+
+.item-7
+{
+    flex: 1 2 200px;
+}
+
+.item-8
+{
+    flex: 1 2 200px;
+}
+
+.item-9
+{
+    flex: 1 0 100px;
+}
+
+/* One more example of these properties in a row again */
+.container-grow-shrink
+{
+    display: flex;
+
+    height: 100vh;
+    background-color: #5555;
+}
+
+/* So here we see that .item-10 has a massively large piece it will give up as everything shrinks. So what you will notice when shrinking down is that .item-11 will stop shrinking first, then item-10, then item-12. And then item-11 will go again because 10 and 12 have given up all they could. But since 11 is still set to shrink 1 it is allowed to shrink nonetheless. This is fun to grasp Lol! */
+.item-10
+{
+    flex: 1 50 200px;
+}
+
+.item-11
+{
+    flex: 2 1 400px;
+}
+
+.item-12
+{
+    flex: 1 5 200px;
 }

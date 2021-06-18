@@ -27,6 +27,27 @@
     background-color: #5555;
 }
 
+@media only screen and (max-width: 500px)
+{
+    .grid-container
+    {
+        grid-template-areas: 
+        ". header header header header header header header header header header ."
+        ". header header header header header header header header header header ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". content content content content content content content content content content ."
+        ". footer footer footer footer footer footer footer footer footer footer ."
+        ". footer footer footer footer footer footer footer footer footer footer ."
+        ;
+    }
+}
+
 header
 {
     grid-area: header;

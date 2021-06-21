@@ -11,6 +11,7 @@
 {
     /* Sets display of .container to flex, and it's default properties */
     display: flex;
+
     /* *************************** */
     /* Default properties include; */
     /* flex-direction: row */
@@ -20,12 +21,14 @@
     
     /* ****************************** */
     /* General Flex Alignment */
-
+    /* In flexBox we have two axis, the main axis and the cross axis */
+    /* justify-x organizes items along the main axis. Since the default direction of display:flex is row, this means that we will be organizing content horizontally. */
+    /* More specifically, flex-direction:row organizes content and items from left to right by default. Left being flex-start and right being flex-end. We could change this by specifying row-reverse, if we wanted. */
     justify-content: space-around;
     /* ****************************** */
 
     /* ******************** */
-    /* Here you can set some properties that only apply to wrap, with the exception of align-content:center */
+    /* Here we're going to setup one or two flex-wrap properties. Things like align-content:x can be used to help redistribute items when they wrap onto a new line. But this can get a bit messy, and much can be solved by simply applying align-x:x properties that you want to be used consistently. */
     /* Flex Wrap Properties */
     flex-wrap: wrap;
     /* align-content: space-between; */
@@ -39,7 +42,7 @@
 
 .item
 {
-    /* Here we are setting flex-grow:1,  because we haven't set shrink or basis they are automatically set to 1 and 0%. */
+    /* Here we are setting flex-grow:1. Because we haven't set shrink or basis they are automatically set to 1 and 0%. */
     flex: 1;
 
     /* Styles */

@@ -1,3 +1,9 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
 .grid-container
 {
     display: grid;
@@ -51,20 +57,52 @@
 header
 {
     grid-area: header;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Styles */
     border-radius: .5rem;
     background-color: blue;
+}
+
+header li
+{
+    display: inline-block;
+
+    margin: 10px;
 }
 
 .content
 {
     grid-area: content;
+
+    display: flex;
+    flex-wrap: wrap;
+
     border-radius: .5rem;
     background-color: #5555;
+    overflow: hidden;
+}
+.content p
+{   
+    flex: 1 1 200px;
+
+    /* Styles */
+    font-size: 1vw;
+    margin: 10px;
 }
 
 footer
 {
     grid-area: footer;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Styles */
     border-radius: .5rem;
     background-color: blueviolet;
 }

@@ -20,10 +20,11 @@
     /* So a . represents 'nothing'. 0. Nada */
     /* Any one word can be used multiple times, but cannot be used to build areas that are not square or rectangular. Nor can they be separated across the grid. */
     /* In this fashion we can layout exactly how we want our page to look. Now we can simply use grid-area:x to denote it's area on the grid. Just wait till you see the next part tho. */
-    grid-template-areas: 
+    grid-template-areas:
     ". header header header header header header header header header header ."
     ". header header header header header header header header header header ."
-    ". . content content content content content content content content . ."
+    ". . . . . . . . . . . ."
+    /* ". . content content content content content content content content . ." */
     ". . content content content content content content content content . ."
     ". . content content content content content content content content . ."
     ". . content content content content content content content content . ."
@@ -48,7 +49,7 @@
         /* That's right we can media query the whole god damn grid. We can just completely reorganize our page on the grid without breaking anything. Boom. Done. Just like that */
 
         /* Here we're expanding content for a phone size width so that it isn't too tiny when you're on your phone. This is just a small example, a tip of the iceberg if you will, of what you can do with CSS GrId. |_|_| */
-        grid-template-areas: 
+        grid-template-areas:
         ". header header header header header header header header header header ."
         ". header header header header header header header header header header ."
         ". content content content content content content content content content content ."
@@ -67,6 +68,7 @@
 
 /* ****************************************************************************************** */
 /* Nav Bar */
+/* header cell */
 header
 {
     /* This is all we have to do to place our header into the area defined as header. We just apply grid-area:header and voila, it exactly fills the space defined in our template */

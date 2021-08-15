@@ -27,7 +27,7 @@
     /* In between the lines we will set our display properties the same way you would set any size in CSS. */
 
     /* Here we have 4 columns, one 4rem column to the left, one 1fr column, another 1fr column, and another 4rem column to close the end. */
-    grid-template-columns: [cl1] 4rem [cl2] 1fr [cl3] 1fr [cl4] 4rem [cle];
+    grid-template-columns: [cl1] 4rem [cl2] 2fr [cl3] 1fr [cl4] 4rem [cle];
     /* Similarly for rows we have a 4rem row at the top, two 1fr rows make up the middle, and another 4rem row to close it off */
     grid-template-rows: [rl1] 4rem [rl2] 1fr [rl3] 1fr [rl4] 4rem [rle];
 
